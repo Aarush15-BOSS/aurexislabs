@@ -60,6 +60,7 @@ margin-left:30px;
 text-decoration:none;
 color:var(--muted);
 font-size:14px;
+position:relative;
 }
 
 .nav-links a:hover{color:white}
@@ -69,6 +70,7 @@ font-size:14px;
 text-align:center;
 margin:120px auto;
 max-width:900px;
+animation:fadeUp 1s ease;
 }
 
 .hero-logo{
@@ -76,12 +78,12 @@ height:80px;
 border-radius:16px;
 margin-bottom:20px;
 box-shadow:0 0 40px var(--glow);
+animation:float 3s ease-in-out infinite;
 }
 
 .hero h1{
 font-size:56px;
 line-height:1.1;
-letter-spacing:-1px;
 }
 
 .hero p{
@@ -103,7 +105,7 @@ transition:0.3s;
 }
 
 .btn:hover{
-transform:translateY(-3px);
+transform:translateY(-4px);
 box-shadow:0 10px 30px var(--glow);
 }
 
@@ -113,8 +115,8 @@ max-width:1000px;
 margin:100px auto;
 padding:0 20px;
 opacity:0;
-transform:translateY(40px);
-transition:0.6s;
+transform:translateY(50px);
+transition:0.8s;
 }
 
 section.show{
@@ -149,8 +151,26 @@ transition:0.3s;
 }
 
 .card:hover{
-transform:translateY(-6px);
-box-shadow:0 10px 40px #000;
+transform:translateY(-8px);
+}
+
+/* CASE STUDY */
+.case{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:30px;
+margin-bottom:50px;
+align-items:center;
+}
+
+.case img{
+width:100%;
+border-radius:14px;
+}
+
+.case-content p{
+margin-top:10px;
+color:var(--muted);
 }
 
 /* CTA */
@@ -161,14 +181,13 @@ background:linear-gradient(135deg,#5b7cff,#3a5bff);
 text-align:center;
 }
 
-/* GLASS CONTACT */
+/* GLASS */
 .glass{
 background:rgba(255,255,255,0.05);
 border:1px solid rgba(255,255,255,0.1);
 backdrop-filter:blur(14px);
 border-radius:16px;
 padding:30px;
-box-shadow:0 10px 40px #000;
 }
 
 /* FORM */
@@ -190,6 +209,24 @@ color:var(--muted);
 border-top:1px solid var(--border);
 margin-top:80px;
 }
+
+/* ANIMATIONS */
+@keyframes fadeUp{
+from{opacity:0; transform:translateY(40px);}
+to{opacity:1; transform:translateY(0);}
+}
+
+@keyframes float{
+0%,100%{transform:translateY(0);}
+50%{transform:translateY(-10px);}
+}
+
+/* MOBILE */
+@media(max-width:768px){
+.case{
+grid-template-columns:1fr;
+}
+}
 </style>
 </head>
 
@@ -204,29 +241,23 @@ margin-top:80px;
 <div class="nav-links">
 <a href="#home">Home</a>
 <a href="#about">About</a>
+<a href="#portfolio">Work</a>
 <a href="#pricing">Pricing</a>
-<a href="#hire">Hire</a>
-<a href="#team">Join Team</a>
 <a href="#contact">Contact</a>
 </div>
 </nav>
 
 <!-- HERO -->
 <div class="hero" id="home">
-
 <img class="hero-logo" src="https://i.postimg.cc/ZnvffBCg/1dcdb7f7-de7b-48ae-920e-9869e990031b-7C361840-19A8-47AC-B944-81763F2E43D9.jpg">
-
 <h1>Build AI & Software That Wins</h1>
 <p>We design and engineer high-performance digital systems.</p>
-
 <a href="#contact" class="btn">Start Project</a>
-
 </div>
 
 <!-- ABOUT -->
 <section id="about">
 <h2>About</h2>
-<p class="sub">Focused on real impact.</p>
 <div class="card">
 Aurexis Labs builds scalable AI systems, games, and software for modern businesses.
 </div>
@@ -242,6 +273,33 @@ Aurexis Labs builds scalable AI systems, games, and software for modern business
 </div>
 </section>
 
+<!-- CASE STUDIES -->
+<section id="portfolio">
+<h2>Case Studies</h2>
+<p class="sub">Real systems. Real impact.</p>
+
+<div class="case">
+<img src="https://images.unsplash.com/photo-1677442136019-21780ecad995">
+<div class="case-content">
+<h3>AI Automation Platform</h3>
+<p><strong>Problem:</strong> Manual workflows were slow.</p>
+<p><strong>Solution:</strong> Built AI automation system.</p>
+<p><strong>Result:</strong> 60% efficiency boost.</p>
+</div>
+</div>
+
+<div class="case">
+<img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db">
+<div class="case-content">
+<h3>3D Cricket Engine</h3>
+<p><strong>Problem:</strong> Unrealistic gameplay.</p>
+<p><strong>Solution:</strong> Custom physics engine.</p>
+<p><strong>Result:</strong> Realistic gameplay.</p>
+</div>
+</div>
+
+</section>
+
 <!-- PRICING -->
 <section id="pricing">
 <h2>Pricing</h2>
@@ -253,18 +311,10 @@ Aurexis Labs builds scalable AI systems, games, and software for modern business
 </section>
 
 <!-- HIRE -->
-<section id="hire">
+<section>
 <div class="cta">
 <h2>Hire Us For Your Next Project</h2>
 <a href="#contact" class="btn">Get Started</a>
-</div>
-</section>
-
-<!-- TEAM -->
-<section id="team">
-<h2>Join Team</h2>
-<div class="card">
-We’re looking for passionate developers and creators.
 </div>
 </section>
 
@@ -273,7 +323,6 @@ We’re looking for passionate developers and creators.
 <h2>Contact</h2>
 
 <div class="glass">
-
 <form class="contact" action="https://formspree.io/f/xjgepqwn" method="POST">
 <input name="name" placeholder="Name" required>
 <input name="email" placeholder="Email" required>
@@ -285,14 +334,10 @@ We’re looking for passionate developers and creators.
 📱 <a href="tel:+917415072867" style="color:white;">+91 7415072867</a><br>
 📸 <a href="https://instagram.com/aurexislabs" style="color:white;">@aurexislabs</a>
 </p>
-
 </div>
-
 </section>
 
-<footer>
-© 2026 Aurexis Labs
-</footer>
+<footer>© 2026 Aurexis Labs</footer>
 
 <script>
 let sections=document.querySelectorAll("section");
