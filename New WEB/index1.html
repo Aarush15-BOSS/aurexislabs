@@ -3,212 +3,313 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aarush Agrawal | Engineering the Future with Code</title>
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+<title>Aurexis Labs — AI Product Studio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- FAVICON -->
+<link rel="icon" href="https://i.postimg.cc/ZnvffBCg/1dcdb7f7-de7b-48ae-920e-9869e990031b-7C361840-19A8-47AC-B944-81763F2E43D9.jpg">
+
 <style>
-/* RESET */
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif;}
-body{background:#0a0f1c;color:#eaeaea;overflow-x:hidden;scroll-behavior:smooth;transition:0.5s;}
-a{text-decoration:none;color:#00f5ff;}
-ul{list-style:none;}
-#particles-js{position:fixed;width:100%;height:100%;z-index:-1;top:0;left:0;}
-/* Dark/Light mode toggle */
-body.light{background:#f5f5f5;color:#0a0f1c;}
-body.light nav{background:rgba(245,245,245,0.7);}
-body.light .card,.flip-front,.flip-back{background:rgba(255,255,255,0.8);color:#0a0f1c;border:1px solid rgba(0,0,0,0.1);}
-body.light .glow-btn{color:#0a0f1c;}
-/* Navbar */
-nav{position:fixed;width:100%;padding:20px 8%;display:flex;justify-content:space-between;align-items:center;background:rgba(15,17,26,0.6);backdrop-filter:blur(20px);z-index:1000;}
-nav h1{font-family:'Orbitron',sans-serif;color:#00f5ff;font-size:22px;letter-spacing:2px;}
-nav ul{display:flex;gap:30px;}
-nav a{transition:0.3s;}nav a:hover{opacity:0.7;}
-#modeToggle{padding:6px 14px;border-radius:10px;border:none;cursor:pointer;background:#00f5ff;color:#0a0f1c;font-weight:700;transition:0.4s;}
-#modeToggle:hover{opacity:0.8;}
-/* Hero */
-.hero{height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:0 10%;}
-.hero h2{font-family:'Orbitron',sans-serif;font-size:60px;color:#00f5ff;margin-bottom:15px;line-height:1.2;min-height:80px;}
-.hero p{font-size:20px;max-width:700px;opacity:0.85;margin-top:10px;}
-.glow-btn{padding:12px 30px;border:none;border-radius:12px;background:linear-gradient(90deg,#00f5ff,#ff00cc);color:#0a0f1c;font-weight:700;cursor:pointer;transition:0.5s;margin-top:25px;}
-.glow-btn:hover{box-shadow:0 0 20px #00f5ff,0 0 30px #ff00cc;}
-/* Sections */
-section{padding:120px 10%;position:relative;}
-.section-title{font-family:'Orbitron',sans-serif;font-size:40px;color:#00f5ff;text-align:center;margin-bottom:60px;}
-/* Flip Cards */
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:40px;perspective:1000px;}
-.flip-card{background:transparent;width:100%;height:250px;perspective:1000px;cursor:pointer;}
-.flip-inner{position:relative;width:100%;height:100%;text-align:center;transition:transform 0.8s;transform-style:preserve-3d;border-radius:25px;box-shadow:0 0 20px rgba(0,245,255,0.2);}
-.flip-card:hover .flip-inner{transform:rotateY(180deg);}
-.flip-front,.flip-back{position:absolute;width:100%;height:100%;backface-visibility:hidden;border-radius:25px;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:20px;background:rgba(255,255,255,0.05);backdrop-filter:blur(20px);border:1px solid rgba(0,245,255,0.2);}
-.flip-back{transform:rotateY(180deg);}
-.flip-back video{width:100%;height:150px;border-radius:15px;object-fit:cover;}
-/* Skills */
-.skill-bar{margin:15px 0;background:rgba(255,255,255,0.05);border-radius:12px;overflow:hidden;}
-.skill-fill{height:25px;width:0;background:linear-gradient(90deg,#00f5ff,#ff00cc);border-radius:12px;display:flex;align-items:center;justify-content:right;padding-right:10px;color:#0a0f1c;font-weight:700;transition:1s;}
-.skill-circle{position:relative;width:120px;height:120px;margin:20px auto;}
-.skill-circle svg{transform:rotate(-90deg);}
-.skill-circle circle{fill:none;stroke:#111;color:#111;stroke-width:12;stroke-linecap:round;}
-.skill-circle .progress{stroke:linear-gradient(90deg,#00f5ff,#ff00cc);stroke-width:12;stroke-linecap:round;stroke-dasharray:377;stroke-dashoffset:377;transition:1s linear;}
-.skill-circle p{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-weight:700;}
-/* Stats */
-.stats{display:flex;justify-content:center;gap:50px;margin-top:50px;flex-wrap:wrap;}
-.stat{background:rgba(255,255,255,0.05);padding:25px 35px;border-radius:25px;text-align:center;backdrop-filter:blur(15px);}
-.stat h3{font-size:32px;color:#00f5ff;margin-bottom:10px;}
-.stat p{opacity:0.85;font-size:18px;}
-/* Contact */
-.contact-box{text-align:center;}
-.contact-box p{margin:15px 0;font-size:18px;opacity:0.85;}
-/* Footer */
-footer{text-align:center;padding:50px;opacity:0.6;}
-/* Reveal */
-.reveal{opacity:0;transform:translateY(80px);filter:blur(10px);transition:1.2s ease;}
-.reveal.active{opacity:1;transform:translateY(0);filter:blur(0);}
+:root{
+--bg:#0a0c10;
+--card:#12161c;
+--text:#f5f7fa;
+--muted:#8b949e;
+--border:#1f2630;
+--accent:#5b7cff;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Inter',sans-serif;
+}
+
+body{
+background:var(--bg);
+color:var(--text);
+line-height:1.6;
+scroll-behavior:smooth;
+}
+
+/* NAVBAR */
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 50px;
+background:rgba(10,12,16,0.7);
+backdrop-filter:blur(10px);
+border-bottom:1px solid var(--border);
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:10px;
+font-weight:600;
+}
+
+.logo img{
+height:34px;
+border-radius:8px;
+}
+
+.nav-links a{
+margin-left:30px;
+text-decoration:none;
+color:var(--muted);
+font-size:14px;
+}
+
+.nav-links a:hover{
+color:white;
+}
+
+/* HERO */
+.hero{
+max-width:1000px;
+margin:120px auto;
+text-align:center;
+padding:0 20px;
+}
+
+.hero-logo{
+height:70px;
+width:70px;
+border-radius:14px;
+object-fit:cover;
+margin-bottom:20px;
+box-shadow:0 10px 30px rgba(0,0,0,0.4);
+}
+
+.hero h1{
+font-size:54px;
+line-height:1.1;
+}
+
+.hero p{
+margin-top:20px;
+color:var(--muted);
+font-size:18px;
+}
+
+/* BUTTON */
+.btn{
+display:inline-block;
+margin-top:30px;
+padding:14px 28px;
+border-radius:8px;
+background:var(--accent);
+color:white;
+text-decoration:none;
+font-weight:500;
+}
+
+/* SECTION */
+section{
+max-width:1000px;
+margin:100px auto;
+padding:0 20px;
+opacity:0;
+transform:translateY(30px);
+transition:0.6s;
+}
+
+section.show{
+opacity:1;
+transform:translateY(0);
+}
+
+h2{
+font-size:30px;
+margin-bottom:10px;
+}
+
+.sub{
+color:var(--muted);
+margin-bottom:30px;
+}
+
+/* GRID */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:20px;
+}
+
+/* CARD */
+.card{
+background:var(--card);
+border:1px solid var(--border);
+border-radius:12px;
+padding:30px;
+}
+
+/* GLASS CONTACT */
+.glass{
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(255,255,255,0.1);
+backdrop-filter:blur(12px);
+border-radius:14px;
+padding:30px;
+}
+
+/* FORM */
+.contact input,
+.contact textarea{
+width:100%;
+padding:14px;
+margin-top:12px;
+border-radius:8px;
+border:1px solid var(--border);
+background:#0f1318;
+color:white;
+}
+
+/* CTA */
+.cta{
+padding:50px;
+border-radius:16px;
+background:var(--accent);
+text-align:center;
+}
+
+/* FOOTER */
+footer{
+text-align:center;
+padding:50px;
+color:var(--muted);
+border-top:1px solid var(--border);
+margin-top:80px;
+}
+
 </style>
 </head>
+
 <body>
-<!-- PARTICLES -->
-<div id="particles-js"></div>
+
+<!-- NAVBAR -->
 <nav>
-<h1>AARUSH AGRAWAL</h1>
-<ul>
-<li><a href="#home">Home</a></li>
-<li><a href="#about">About</a></li>
-<li><a href="#projects">Projects</a></li>
-<li><a href="#skills">Skills</a></li>
-<li><a href="#stats">Stats</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
-<button id="modeToggle">Light/Dark</button>
+<div class="logo">
+<img src="https://i.postimg.cc/ZnvffBCg/1dcdb7f7-de7b-48ae-920e-9869e990031b-7C361840-19A8-47AC-B944-81763F2E43D9.jpg">
+<span>Aurexis Labs</span>
+</div>
+
+<div class="nav-links">
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#pricing">Pricing</a>
+<a href="#hire">Hire</a>
+<a href="#team">Join Team</a>
+<a href="#contact">Contact</a>
+</div>
 </nav>
-<!-- Hero -->
-<section class="hero" id="home">
-<h2 id="typed-text"></h2>
-<p>I build scalable projects, intelligent systems, and interactive experiences that shape the digital world.</p>
-<button class="glow-btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Contact Me</button>
-</section>
-<!-- About -->
-<section id="about" class="reveal">
-<h2 class="section-title">About Me</h2>
-<div class="cards">
-<div class="flip-card"><div class="flip-inner">
-<div class="flip-front card"><h3>Visionary Builder</h3><p>Planning projects with long-term impact.</p></div>
-<div class="flip-back card"><h3>Details</h3><p>Structured approach, scalable software, futuristic design.</p></div>
-</div></div>
-<div class="flip-card"><div class="flip-inner">
-<div class="flip-front card"><h3>Problem Solver</h3><p>Complex challenges excite me.</p></div>
-<div class="flip-back card"><h3>Details</h3><p>Logical breakdowns, AI implementation, advanced algorithms.</p></div>
-</div></div>
-<div class="flip-card"><div class="flip-inner">
-<div class="flip-front card"><h3>Execution Driven</h3><p>Ideas become reality.</p></div>
-<div class="flip-back card"><h3>Details</h3><p>High-quality code, real projects, scalable solutions.</p></div>
-</div></div>
+
+<!-- HOME -->
+<div class="hero" id="home">
+
+<img class="hero-logo" src="https://i.postimg.cc/ZnvffBCg/1dcdb7f7-de7b-48ae-920e-9869e990031b-7C361840-19A8-47AC-B944-81763F2E43D9.jpg">
+
+<h1>We Build AI & Software Products That Scale</h1>
+
+<p>Aurexis Labs designs and builds high-performance systems.</p>
+
+<a href="#contact" class="btn">Start Project</a>
+
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+<h2>About</h2>
+<p class="sub">Building impactful technology.</p>
+
+<div class="card">
+Aurexis Labs builds AI systems, game engines, and scalable software for modern businesses.
 </div>
 </section>
-<!-- Projects -->
-<section id="projects" class="reveal">
-<h2 class="section-title">Projects</h2>
-<div class="cards">
-<div class="flip-card"><div class="flip-inner">
-<div class="flip-front card"><h3>3D Cricket Simulation</h3><p>Hover to preview project.</p></div>
-<div class="flip-back card">
-<video src="https://www.w3schools.com/html/mov_bbb.mp4" autoplay muted loop></video>
-<p>AI Cricket Game with realistic physics.</p>
-</div>
-</div></div>
-<div class="flip-card"><div class="flip-inner">
-<div class="flip-front card"><h3>Academic Intelligence System</h3><p>Hover to preview project.</p></div>
-<div class="flip-back card">
-<video src="https://www.w3schools.com/html/movie.mp4" autoplay muted loop></video>
-<p>AI study planner optimized for boards.</p>
-</div>
-</div></div>
-<div class="flip-card"><div class="flip-inner">
-<div class="flip-front card"><h3>Future Startup Vision</h3><p>Hover to preview project.</p></div>
-<div class="flip-back card">
-<video src="https://www.w3schools.com/html/mov_bbb.mp4" autoplay muted loop></video>
-<p>Scalable digital infrastructure project.</p>
-</div>
-</div></div>
+
+<!-- SERVICES -->
+<section>
+<h2>Services</h2>
+
+<div class="grid">
+<div class="card">AI Systems</div>
+<div class="card">Game Development</div>
+<div class="card">Software Engineering</div>
 </div>
 </section>
-<!-- Skills -->
-<section id="skills" class="reveal">
-<h2 class="section-title">Skills</h2>
-<div class="skill-bar"><div class="skill-fill" data-percent="95%">HTML 95%</div></div>
-<div class="skill-bar"><div class="skill-fill" data-percent="90%">Java 90%</div></div>
-</section>
-<!-- Stats -->
-<section id="stats" class="reveal">
-<h2 class="section-title">Stats</h2>
-<div class="stats">
-<div class="stat"><h3 id="stat1">0</h3><p>Newcomer</p></div>
-<div class="stat"><h3 id="stat2">0</h3><p>Maths Expert</p></div>
-<div class="stat"><h3 id="stat3">0</h3><p>Class 10 Student</p></div>
+
+<!-- PRICING -->
+<section id="pricing">
+<h2>Pricing</h2>
+
+<div class="grid">
+<div class="card">Starter — ₹10,000+</div>
+<div class="card">Professional — ₹50,000+</div>
+<div class="card">Enterprise — Custom</div>
 </div>
 </section>
-<!-- Contact -->
-<section id="contact" class="reveal">
-<h2 class="section-title">Contact</h2>
-<div class="contact-box">
-<p>📞 +91 7415072867</p>
-<p>📧 aarushagrawal240411@gmail.com</p>
-<p>📸 Instagram: darkscent_aarushagrawal</p>
+
+<!-- HIRE -->
+<section id="hire">
+<div class="cta">
+<h2>Hire Us For Your Next Project</h2>
+<a href="#contact" class="btn">Get Started</a>
 </div>
 </section>
+
+<!-- JOIN TEAM -->
+<section id="team">
+<h2>Join Our Team</h2>
+
+<div class="card">
+We are looking for developers and designers. Reach out to collaborate.
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+<h2>Contact</h2>
+
+<div class="glass">
+
+<form class="contact" action="https://formspree.io/f/xjgepqwn" method="POST">
+<input name="name" placeholder="Name" required>
+<input name="email" placeholder="Email" required>
+<textarea name="message" placeholder="Your idea" required></textarea>
+<button class="btn">Send Message</button>
+</form>
+
+<p style="margin-top:20px;">
+📱 <a href="tel:+917415072867" style="color:white;">+91 7415072867</a><br>
+📸 <a href="https://instagram.com/aurexislabs" style="color:white;">@aurexislabs</a>
+</p>
+
+</div>
+</section>
+
 <footer>
-© 2026 Aarush Agrawal | Ultimate Neon Portfolio
+© 2026 Aurexis Labs
 </footer>
-<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+
 <script>
-/* PARTICLES JS */
-particlesJS("particles-js",{
-"particles":{
-"number":{"value":100,"density":{"enable":true,"value_area":800}},
-"color":{"value":["#00f5ff","#ff00cc"]},
-"shape":{"type":"circle"},
-"opacity":{"value":0.05,"random":true},
-"size":{"value":3,"random":true},
-"line_linked":{"enable":true,"distance":120,"color":"#00f5ff","opacity":0.05,"width":1},
-"move":{"enable":true,"speed":2,"direction":"none","random":true,"out_mode":"out"}
-},
-"interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":true,"mode":"repulse"}}}
-});
-/* Typing Hero */
-const text="Engineering the Future with Code";
-let i=0;
-const typedEl=document.getElementById("typed-text");
-function typeWriter(){
-if(i<text.length){typedEl.innerHTML+=text.charAt(i);i++;setTimeout(typeWriter,100);}
-}
-typeWriter();
-/* Scroll Reveal */
-const reveals=document.querySelectorAll(".reveal");
+let sections=document.querySelectorAll("section");
+
 window.addEventListener("scroll",()=>{
-reveals.forEach(sec=>{
-if(sec.getBoundingClientRect().top<window.innerHeight-100){sec.classList.add("active");}})});
-/* Skill Animation */
-window.addEventListener("scroll",()=>{
-const skills=document.querySelectorAll(".skill-fill");
-skills.forEach(skill=>{
-const rect=skill.getBoundingClientRect();
-if(rect.top<window.innerHeight-100){skill.style.width=skill.getAttribute("data-percent");}
-});
-});
-/* Stats Counters */
-function animateCounter(id,target){
-let count=0;
-const el=document.getElementById(id);
-const interval=setInterval(()=>{if(count<target){count++;el.innerText=count;}else{clearInterval(interval);}},30);
-}
-window.addEventListener("scroll",()=>{
-const rect=document.getElementById("stats").getBoundingClientRect();
-if(rect.top<window.innerHeight-100){
-animateCounter("stat1",1);
-animateCounter("stat2",100);
-animateCounter("stat3",10);
+sections.forEach(sec=>{
+if(sec.getBoundingClientRect().top < window.innerHeight-100){
+sec.classList.add("show");
 }
 });
-/* Dark/Light Mode */
-document.getElementById("modeToggle").addEventListener("click",()=>{document.body.classList.toggle("light");});
+});
 </script>
+
 </body>
 </html>
