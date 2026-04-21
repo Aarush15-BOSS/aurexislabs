@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aurexis Labs - Innovation Redefined</title>
+    <title>Aurexis Labs - Innovation Redefined | Founded by Aarush Agrawal</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -13,24 +13,36 @@
             box-sizing: border-box;
         }
 
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --secondary: #06b6d4;
+            --accent: #f59e0b;
+            --dark: #0f172a;
+            --dark-light: #1e293b;
+            --light: #f8fafc;
+            --white: #ffffff;
+            --gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --gradient-2: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+
         body {
             font-family: 'Inter', sans-serif;
             line-height: 1.6;
-            color: #333;
+            color: var(--dark);
             overflow-x: hidden;
         }
 
-        /* Navigation */
+        /* Navbar */
         .navbar {
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(15, 23, 42, 0.95);
             backdrop-filter: blur(20px);
             z-index: 1000;
             padding: 1rem 0;
             transition: all 0.3s ease;
-            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
         }
 
         .nav-container {
@@ -39,36 +51,43 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 0 5%;
+            padding: 0 2rem;
         }
 
         .logo {
-            height: 50px;
-            width: auto;
-            transition: transform 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--white);
+            text-decoration: none;
         }
 
-        .logo:hover {
-            transform: scale(1.05);
+        .logo img {
+            height: 50px;
+            width: 50px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.4);
         }
 
         .nav-menu {
             display: flex;
             list-style: none;
-            gap: 2.5rem;
+            gap: 2rem;
+            align-items: center;
         }
 
         .nav-link {
+            color: rgba(255, 255, 255, 0.9);
             text-decoration: none;
-            color: #333;
             font-weight: 500;
-            font-size: 1rem;
+            transition: all 0.3s ease;
             position: relative;
-            transition: color 0.3s ease;
         }
 
         .nav-link:hover {
-            color: #6366f1;
+            color: var(--primary);
         }
 
         .nav-link::after {
@@ -78,7 +97,7 @@
             height: 2px;
             bottom: -5px;
             left: 0;
-            background: linear-gradient(90deg, #6366f1, #8b5cf6);
+            background: var(--primary);
             transition: width 0.3s ease;
         }
 
@@ -87,31 +106,27 @@
         }
 
         .cta-button {
-            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            background: var(--gradient);
             color: white;
-            padding: 12px 30px;
-            border: none;
+            padding: 12px 28px;
             border-radius: 50px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
             text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
             box-shadow: 0 10px 30px rgba(99, 102, 241, 0.4);
         }
 
         .cta-button:hover {
             transform: translateY(-2px);
-            box-shadow: 0 15px 40px rgba(99, 102, 241, 0.6);
+            box-shadow: 0 20px 40px rgba(99, 102, 241, 0.6);
         }
 
         /* Hero Section */
         .hero {
-            height: 100vh;
-            background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
+            min-height: 100vh;
             display: flex;
             align-items: center;
-            justify-content: center;
-            text-align: center;
+            background: var(--gradient);
             position: relative;
             overflow: hidden;
         }
@@ -123,7 +138,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><radialGradient id="a" cx="50%" cy="50%"><stop offset="0%" stop-color="%236366f1" stop-opacity="0.1"/><stop offset="100%" stop-color="%238b5cf6" stop-opacity="0"/></radialGradient></defs><circle cx="200" cy="200" r="100" fill="url(%23a)"><animate attributeName="r" values="100;150;100" dur="3s" repeatCount="indefinite"/></circle><circle cx="800" cy="300" r="80" fill="url(%23a)"><animate attributeName="r" values="80;120;80" dur="4s" repeatCount="indefinite"/></circle></svg>');
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><radialGradient id="a" cx="50%" cy="50%"><stop offset="0%" stop-color="%23ffffff" stop-opacity="0.1"/><stop offset="100%" stop-color="%23ffffff" stop-opacity="0"/></radialGradient></defs><circle cx="200" cy="200" r="100" fill="url(%23a)"><animate attributeName="r" values="100;150;100" dur="3s" repeatCount="indefinite"/></circle><circle cx="800" cy="300" r="80" fill="url(%23a)"><animate attributeName="r" values="80;120;80" dur="4s" repeatCount="indefinite"/></circle></svg>');
             animation: float 20s ease-in-out infinite;
         }
 
@@ -133,66 +148,151 @@
         }
 
         .hero-content {
-            max-width: 900px;
+            max-width: 1400px;
+            margin: 0 auto;
             padding: 0 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
             position: relative;
             z-index: 2;
         }
 
-        .hero h1 {
-            font-size: clamp(3rem, 8vw, 6rem);
+        .hero-text h1 {
+            font-size: clamp(3rem, 6vw, 5rem);
             font-weight: 800;
             background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            margin-bottom: 2rem;
-            animation: fadeInUp 1s ease-out;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
         }
 
-        .hero p {
+        .hero-text .subtitle {
             font-size: 1.5rem;
-            color: #cbd5e1;
-            margin-bottom: 3rem;
-            animation: fadeInUp 1s ease-out 0.2s both;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 2rem;
+            font-weight: 400;
         }
 
         .hero-buttons {
             display: flex;
-            gap: 1.5rem;
-            justify-content: center;
+            gap: 1rem;
             flex-wrap: wrap;
-            animation: fadeInUp 1s ease-out 0.4s both;
+        }
+
+        .btn-primary {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            color: white;
+            padding: 18px 36px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background: white;
+            color: var(--dark);
+            transform: translateY(-3px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            padding: 18px 36px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-3px);
+        }
+
+        .hero-image {
+            position: relative;
+            justify-self: end;
+        }
+
+        .hero-image img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 30px;
+            box-shadow: 0 50px 100px rgba(0, 0, 0, 0.3);
+            animation: floatImage 6s ease-in-out infinite;
+        }
+
+        @keyframes floatImage {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(2deg); }
+        }
+
+        /* Stats Section */
+        .stats {
+            padding: 6rem 2rem;
+            background: var(--light);
+            text-align: center;
+        }
+
+        .stats-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+        }
+
+        .stat-item {
+            padding: 2rem;
+        }
+
+        .stat-number {
+            font-size: 4rem;
+            font-weight: 800;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
         }
 
         /* About Section */
         .about {
-            padding: 120px 0;
-            background: #f8fafc;
+            padding: 8rem 2rem;
+            background: var(--white);
         }
 
         .container {
             max-width: 1400px;
             margin: 0 auto;
-            padding: 0 5%;
+            padding: 0 2rem;
         }
 
         .section-header {
             text-align: center;
-            margin-bottom: 5rem;
+            margin-bottom: 4rem;
         }
 
-        .section-header h2 {
-            font-size: 3.5rem;
+        .section-title {
+            font-size: clamp(2.5rem, 4vw, 3.5rem);
             font-weight: 800;
-            background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+            margin-bottom: 1rem;
+            background: var(--gradient);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            margin-bottom: 1rem;
         }
 
-        .section-header p {
+        .section-subtitle {
             font-size: 1.25rem;
             color: #64748b;
             max-width: 600px;
@@ -202,60 +302,77 @@
         .about-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 5rem;
+            gap: 4rem;
             align-items: center;
         }
 
-        .about-text h3 {
-            font-size: 2.5rem;
+        .founder-info h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+
+        .founder-info .role {
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 1.2rem;
             margin-bottom: 1.5rem;
-            color: #1e293b;
         }
 
-        .founder {
-            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
         }
 
-        .stats {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-            margin-top: 3rem;
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background: var(--gradient);
+            color: white;
+            border-radius: 12px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 1.2rem;
         }
 
-        .stat {
+        .social-link:hover {
+            transform: translateY(-5px) scale(1.1);
+            box-shadow: 0 15px 30px rgba(99, 102, 241, 0.4);
+        }
+
+        .about-image {
             text-align: center;
         }
 
-        .stat-number {
-            font-size: 3rem;
-            font-weight: 800;
-            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+        .about-image img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 20px;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
         }
 
         /* Services */
         .services {
-            padding: 120px 0;
-            background: #0f0f23;
+            padding: 8rem 2rem;
+            background: var(--dark-light);
             color: white;
         }
 
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2.5rem;
+            gap: 2rem;
+            margin-top: 4rem;
         }
 
         .service-card {
             background: rgba(255, 255, 255, 0.05);
             backdrop-filter: blur(20px);
-            padding: 3rem 2.5rem;
+            padding: 2.5rem;
             border-radius: 24px;
             border: 1px solid rgba(255, 255, 255, 0.1);
             transition: all 0.4s ease;
@@ -270,42 +387,43 @@
             left: 0;
             right: 0;
             height: 4px;
-            background: linear-gradient(90deg, #6366f1, #8b5cf6, #ec4899);
+            background: var(--gradient);
         }
 
         .service-card:hover {
             transform: translateY(-15px);
-            box-shadow: 0 30px 60px rgba(99, 102, 241, 0.3);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+            border-color: var(--primary);
         }
 
         .service-icon {
             width: 80px;
             height: 80px;
-            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            background: var(--gradient);
             border-radius: 20px;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 2rem;
             font-size: 2rem;
+            margin-bottom: 1.5rem;
         }
 
         /* Contact */
         .contact {
-            padding: 120px 0;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 8rem 2rem;
+            background: var(--gradient);
             color: white;
         }
 
         .contact-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 5rem;
-            align-items: center;
+            gap: 4rem;
+            align-items: start;
         }
 
         .contact-info h3 {
-            font-size: 2.5rem;
+            font-size: 2rem;
             margin-bottom: 2rem;
         }
 
@@ -315,151 +433,155 @@
             gap: 1rem;
             margin-bottom: 1.5rem;
             padding: 1rem;
-            background: rgba(255,255,255,0.1);
-            border-radius: 16px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
         }
 
         .contact-form {
-            background: rgba(255,255,255,0.1);
+            background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(20px);
-            padding: 3rem;
+            padding: 2.5rem;
             border-radius: 24px;
-            border: 1px solid rgba(255,255,255,0.2);
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
 
         .form-group {
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
         }
 
         .form-group input,
         .form-group textarea {
             width: 100%;
-            padding: 1rem 1.5rem;
-            border: none;
+            padding: 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.3);
             border-radius: 12px;
-            background: rgba(255,255,255,0.9);
-            font-size: 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            font-family: inherit;
             transition: all 0.3s ease;
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: rgba(255, 255, 255, 0.7);
         }
 
         .form-group input:focus,
         .form-group textarea:focus {
             outline: none;
-            background: white;
-            box-shadow: 0 0 0 3px rgba(99,102,241,0.3);
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+        }
+
+        .submit-btn {
+            width: 100%;
+            background: var(--white);
+            color: var(--dark);
+            padding: 1.2rem;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
         }
 
         /* Footer */
         .footer {
-            background: #0f0f23;
-            color: #cbd5e1;
-            padding: 3rem 0 1.5rem;
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 3rem 2rem 1.5rem;
         }
 
         .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
             gap: 2rem;
             margin-bottom: 2rem;
+            flex-wrap: wrap;
         }
 
-        .footer-section h4 {
-            color: white;
-            margin-bottom: 1rem;
-            font-size: 1.2rem;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 1rem;
-        }
-
-        .social-link {
-            width: 45px;
-            height: 45px;
-            background: linear-gradient(135deg, #6366f1, #8b5cf6);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
+        .footer-link {
+            color: rgba(255, 255, 255, 0.7);
             text-decoration: none;
-            transition: all 0.3s ease;
+            transition: color 0.3s ease;
         }
 
-        .social-link:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(99,102,241,0.4);
+        .footer-link:hover {
+            color: var(--primary);
         }
 
-        .footer-bottom {
-            text-align: center;
-            padding-top: 2rem;
-            border-top: 1px solid #334155;
-            color: #64748b;
-        }
-
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Responsive */
+        /* Mobile Responsiveness */
         @media (max-width: 768px) {
             .nav-menu {
                 display: none;
             }
 
-            .hero h1 {
-                font-size: 3rem;
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 2rem;
+            }
+
+            .hero-buttons {
+                justify-content: center;
             }
 
             .about-content,
             .contact-content {
                 grid-template-columns: 1fr;
-                gap: 3rem;
+                gap: 2rem;
             }
 
-            .hero-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .stats {
-                grid-template-columns: 1fr;
+            .stats-container {
+                grid-template-columns: repeat(2, 1fr);
             }
         }
 
         /* Scroll animations */
-        .reveal {
+        .fade-in {
             opacity: 0;
-            transform: translateY(50px);
+            transform: translateY(30px);
             transition: all 0.8s ease;
         }
 
-        .reveal.active {
+        .fade-in.visible {
             opacity: 1;
             transform: translateY(0);
         }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
+    <!-- Navbar -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <img src="https://i.postimg.cc/ZnvffBCg/1dcdb7f7-de7b-48ae-920e-9869e990031b-7C361840-19A8-47AC-B944-81763F2E43D9.jpg" alt="Aurexis Labs Logo" class="logo">
+            <a href="#home" class="logo">
+                <img src="https://i.postimg.cc/ZnvffBCg/1dcdb7f7-de7b-48ae-920e-9869e990031b-7C361840-19A8-47AC-B944-81763F2E43D9.jpg" alt="Aurexis Labs Logo">
+                <span>Aurexis Labs</span>
+            </a>
             <ul class="nav-menu">
                 <li><a href="#home" class="nav-link">Home</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#services" class="nav-link">Services</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="mailto:aarushagrawal240411@gmail.com" class="nav-link">Email</a></li>
             </ul>
             <a href="#contact" class="cta-button">Get Started</a>
         </div>
@@ -468,44 +590,66 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
-            <h1>Future-Ready Innovation</h1>
-            <p>Aurexis Labs crafts cutting-edge solutions that redefine possibilities. Founded by <span class="founder">Aarush Agrawal</span>, we're building tomorrow's technology today.</p>
-            <div class="hero-buttons">
-                <a href="#services" class="cta-button">Explore Services</a>
-                <a href="#contact" class="cta-button" style="background: transparent; border: 2px solid white;">Contact Us</a>
+            <div class="hero-text fade-in">
+                <h1>Future-Ready Innovation<br>Engineered by <span style="background: linear-gradient(135deg, #ffffff 0%, #a5b4fc 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Aurexis Labs</span></h1>
+                <p class="subtitle">Transforming bold ideas into world-class digital experiences. Founded by Aarush Agrawal.</p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn-primary">Start Your Project</a>
+                    <a href="#services" class="btn-secondary">Our Services</a>
+                </div>
+            </div>
+            <div class="hero-image fade-in">
+                <img src="https://i.postimg.cc/ZnvffBCg/1dcdb7f7-de7b-48ae-920e-9869e990031b-7C361840-19A8-47AC-B944-81763F2E43D9.jpg" alt="Aurexis Labs">
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="stats-container">
+            <div class="stat-item fade-in">
+                <div class="stat-number">100+</div>
+                <div>Projects Delivered</div>
+            </div>
+            <div class="stat-item fade-in">
+                <div class="stat-number">50+</div>
+                <div>Happy Clients</div>
+            </div>
+            <div class="stat-item fade-in">
+                <div class="stat-number">24/7</div>
+                <div>Support</div>
+            </div>
+            <div class="stat-item fade-in">
+                <div class="stat-number">99.9%</div>
+                <div>Uptime</div>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about reveal">
+    <section id="about" class="about">
         <div class="container">
-            <div class="section-header">
-                <h2>About Aurexis Labs</h2>
-                <p>Where visionary ideas meet cutting-edge technology. We're not just building products – we're shaping the future.</p>
+            <div class="section-header fade-in">
+                <h2 class="section-title">Meet the Visionary Behind Aurexis Labs</h2>
+                <p class="section-subtitle">Aarush Agrawal - Founder & CEO</p>
             </div>
             <div class="about-content">
-                <div class="about-text">
-                    <h3>Founded by <span class="founder">Aarush Agrawal</span></h3>
-                    <p>Aurexis Labs was born from a passion for innovation and excellence. Under the leadership of founder Aarush Agrawal, we combine creativity with technical mastery to deliver transformative solutions that drive real impact.</p>
-                    <p>Our mission is simple: solve complex problems with elegant technology. From AI-powered applications to scalable web platforms, we build what the future demands.</p>
-                    <div class="stats">
-                        <div class="stat">
-                            <div class="stat-number">100+</div>
-                            <div>Projects Delivered</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-number">50+</div>
-                            <div>Happy Clients</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-number">24/7</div>
-                            <div>Support</div>
-                        </div>
+                <div class="founder-info fade-in">
+                    <h3>Aarush Agrawal</h3>
+                    <div class="role">Founder & Chief Innovation Officer</div>
+                    <p><strong>Aarush Agrawal</strong> is a visionary entrepreneur and technology leader who founded <strong>Aurexis Labs</strong> with a mission to redefine digital innovation. With expertise in cutting-edge technologies and a passion for creating transformative solutions, Aarush leads a team of elite developers to deliver unparalleled results.</p>
+                    <p>Connect with us:</p>
+                    <div class="social-links">
+                        <a href="mailto:aarushagrawal240411@gmail.com" class="social-link" title="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="https://instagram.com/aurexislabs" target="_blank" class="social-link" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
                     </div>
                 </div>
-                <div style="position: relative;">
-                    <img src="https://i.postimg.cc/ZnvffBCg/1dcdb7f7-de7b-48ae-920e-9869e990031b-7C361840-19A8-47AC-B944-81763F2E43D9.jpg" alt="Aurexis Labs" style="width: 100%; border-radius: 24px; box-shadow: 0 30px 60px rgba(0,0,0,0.2);">
+                <div class="about-image fade-in">
+                    <img src="https://i.postimg.cc/ZnvffBCg/1dcdb7f7-de7b-48ae-920e-9869e990031b-7C361840-19A8-47AC-B944-81763F2E43D9.jpg" alt="Aarush Agrawal - Founder">
                 </div>
             </div>
         </div>
@@ -514,52 +658,52 @@
     <!-- Services Section -->
     <section id="services" class="services">
         <div class="container">
-            <div class="section-header">
-                <h2>What We Do</h2>
-                <p>Comprehensive solutions powered by the latest technologies</p>
+            <div class="section-header fade-in">
+                <h2 class="section-title" style="color: white;">World-Class Services</h2>
+                <p class="section-subtitle" style="color: rgba(255,255,255,0.8);">We craft digital excellence with precision and passion</p>
             </div>
             <div class="services-grid">
-                <div class="service-card reveal">
+                <div class="service-card fade-in">
                     <div class="service-icon">
-                        <i class="fas fa-robot"></i>
-                    </div>
-                    <h3>AI & Machine Learning</h3>
-                    <p>Intelligent systems that learn, adapt, and deliver results beyond human capability.</p>
-                </div>
-                <div class="service-card reveal">
-                    <div class="service-icon">
-                        <i class="fas fa-code"></i>
+                        <i class="fas fa-rocket"></i>
                     </div>
                     <h3>Web Development</h3>
-                    <p>Lightning-fast, scalable web applications built with modern frameworks and best practices.</p>
+                    <p>Lightning-fast, responsive websites built with modern frameworks and best practices. From startups to enterprises.</p>
                 </div>
-                <div class="service-card reveal">
-                    <div class="service-icon">
+                <div class="service-card fade-in">
+                    <div class="service-icon" style="background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%);">
                         <i class="fas fa-mobile-alt"></i>
                     </div>
                     <h3>Mobile Apps</h3>
-                    <p>Native and cross-platform mobile experiences that engage users across all devices.</p>
+                    <p>Native and cross-platform mobile applications that deliver exceptional user experiences across all devices.</p>
                 </div>
-                <div class="service-card reveal">
-                    <div class="service-icon">
-                        <i class="fas fa-cloud"></i>
+                <div class="service-card fade-in">
+                    <div class="service-icon" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%);">
+                        <i class="fas fa-brain"></i>
                     </div>
-                    <h3>Cloud Solutions</h3>
-                    <p>Scalable, secure cloud infrastructure designed for growth and reliability.</p>
+                    <h3>AI & ML Solutions</h3>
+                    <p>Cutting-edge artificial intelligence and machine learning solutions tailored to your business needs.</p>
                 </div>
-                <div class="service-card reveal">
-                    <div class="service-icon">
+                <div class="service-card fade-in">
+                    <div class="service-icon" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);">
                         <i class="fas fa-shield-alt"></i>
                     </div>
                     <h3>Cybersecurity</h3>
-                    <p>Enterprise-grade security solutions protecting your digital assets 24/7.</p>
+                    <p>Enterprise-grade security solutions to protect your digital assets and ensure compliance.</p>
                 </div>
-                <div class="service-card reveal">
-                    <div class="service-icon">
+                <div class="service-card fade-in">
+                    <div class="service-icon" style="background: linear-gradient(135deg, #ec4899 0%, #be185d 100%);">
                         <i class="fas fa-chart-line"></i>
                     </div>
-                    <h3>Analytics & BI</h3>
-                    <p>Transform raw data into actionable insights with advanced analytics platforms.</p>
+                    <h3>Digital Marketing</h3>
+                    <p>Data-driven marketing strategies that convert visitors into loyal customers.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon" style="background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3>Cloud Solutions</h3>
+                    <p>Scalable cloud infrastructure and DevOps services for maximum performance and reliability.</p>
                 </div>
             </div>
         </div>
@@ -568,66 +712,53 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <div class="section-header">
-                <h2>Ready to Transform Your Vision?</h2>
-                <p>Let's create something extraordinary together</p>
+            <div class="section-header fade-in">
+                <h2 class="section-title" style="color: white;">Ready to Transform Your Vision?</h2>
+                <p class="section-subtitle">Let's create something extraordinary together</p>
             </div>
             <div class="contact-content">
-                <div class="contact-info reveal">
+                <div class="contact-info fade-in">
                     <h3>Get In Touch</h3>
                     <div class="contact-item">
-                        <i class="fas fa-envelope" style="font-size: 1.5rem; color: #6366f1;"></i>
+                        <i class="fas fa-envelope" style="font-size: 1.5rem; color: var(--accent);"></i>
                         <div>
-                            <div style="font-weight: 600; margin-bottom: 0.25rem;">Email</div>
-                            <a href="mailto:aarushagrawal240411@gmail.com" style="color: white; text-decoration: none;">aarushagrawal240411@gmail.com</a>
+                            <strong>aarushagrawal240411@gmail.com</strong>
                         </div>
                     </div>
                     <div class="contact-item">
-                        <i class="fab fa-instagram" style="font-size: 1.5rem; color: #e4405f;"></i>
+                        <i class="fab fa-instagram" style="font-size: 1.5rem; color: var(--accent);"></i>
                         <div>
-                            <div style="font-weight: 600; margin-bottom: 0.25rem;">Instagram</div>
-                            <a href="https://instagram.com/aurexislabs" target="_blank" style="color: white; text-decoration: none;">@aurexislabs</a>
+                            <strong>@aurexislabs</strong>
                         </div>
                     </div>
                     <div class="contact-item">
-                        <i class="fas fa-map-marker-alt" style="font-size: 1.5rem; color: #f59e0b;"></i>
+                        <i class="fas fa-map-marker-alt" style="font-size: 1.5rem; color: var(--accent);"></i>
                         <div>
-                            <div style="font-weight: 600; margin-bottom: 0.25rem;">Location</div>
-                            <div>Building the Future, Worldwide</div>
-                        </div>
-                    </div>
-                    <div style="margin-top: 2rem;">
-                        <h4>Follow Our Journey</h4>
-                        <div class="social-links">
-                            <a href="https://instagram.com/aurexislabs" target="_blank" class="social-link">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                            <a href="mailto:aarushagrawal240411@gmail.com" class="social-link">
-                                <i class="fas fa-envelope"></i>
-                            </a>
-                            <a href="#" class="social-link">
-                                <i class="fab fa-linkedin"></i>
-                            </a>
-                            <a href="#" class="social-link">
-                                <i class="fab fa-twitter"></i>
-                            </a>
+                            <strong>Global Operations</strong><br>
+                            Serving clients worldwide
                         </div>
                     </div>
                 </div>
-                <form class="contact-form reveal">
+                <form action="https://formspree.io/f/xjgepqwn" method="POST" class="contact-form fade-in">
                     <div class="form-group">
-                        <input type="text" placeholder="Your Name" required>
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required>
                     </div>
                     <div class="form-group">
-                        <input type="email" placeholder="Your Email" required>
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
                     </div>
                     <div class="form-group">
-                        <input type="text" placeholder="Subject" required>
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
                     </div>
                     <div class="form-group">
-                        <textarea rows="5" placeholder="Tell us about your project..." required></textarea>
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
                     </div>
-                    <button type="submit" class="cta-button" style="width: 100%; font-size: 1.1rem;">Send Message</button>
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
                 </form>
             </div>
         </div>
@@ -635,45 +766,16 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <img src="https://i.postimg.cc/ZnvffBCg/1dcdb7f7-de7b-48ae-920e-9869e990031b-7C361840-19A8-47AC-B944-81763F2E43D9.jpg" alt="Aurexis Labs" style="height: 40px; margin-bottom: 1rem;">
-                    <p style="max-width: 300px; margin-bottom: 1rem;">Aurexis Labs. Redefining innovation through technology. Founded by Aarush Agrawal.</p>
-                    <div class="social-links">
-                        <a href="https://instagram.com/aurexislabs" target="_blank" class="social-link">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul style="list-style: none;">
-                        <li><a href="#home" style="color: #cbd5e1; text-decoration: none;">Home</a></li>
-                        <li><a href="#about" style="color: #cbd5e1; text-decoration: none;">About</a></li>
-                        <li><a href="#services" style="color: #cbd5e1; text-decoration: none;">Services</a></li>
-                        <li><a href="#contact" style="color: #cbd5e1; text-decoration: none;">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Services</h4>
-                    <ul style="list-style: none;">
-                        <li><a href="#" style="color: #cbd5e1; text-decoration: none;">AI & ML</a></li>
-                        <li><a href="#" style="color: #cbd5e1; text-decoration: none;">Web Development</a></li>
-                        <li><a href="#" style="color: #cbd5e1; text-decoration: none;">Mobile Apps</a></li>
-                        <li><a href="#" style="color: #cbd5e1; text-decoration: none;">Cloud Solutions</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Company</h4>
-                    <p>Founded by <strong>Aarush Agrawal</strong></p>
-                    <p><strong>aarushagrawal240411@gmail.com</strong></p>
-                    <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">© 2024 Aurexis Labs. All rights reserved.</p>
-                </div>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#home" class="footer-link">Home</a>
+                <a href="#about" class="footer-link">About</a>
+                <a href="#services" class="footer-link">Services</a>
+                <a href="#contact" class="footer-link">Contact</a>
+                <a href="mailto:aarushagrawal240411@gmail.com" class="footer-link">Email</a>
+                <a href="https://instagram.com/aurexislabs" target="_blank" class="footer-link">Instagram</a>
             </div>
-            <div class="footer-bottom">
-                <p>Made with ❤️ by Aurexis Labs | Designed for the Future</p>
-            </div>
+            <p>&copy; 2024 Aurexis Labs. Founded by <strong>Aarush Agrawal</strong>. All rights reserved.</p>
         </div>
     </footer>
 
@@ -682,15 +784,15 @@
         window.addEventListener('scroll', () => {
             const navbar = document.getElementById('navbar');
             if (window.scrollY > 100) {
-                navbar.style.background = 'rgba(255, 255, 255, 0.98)';
-                navbar.style.boxShadow = '0 5px 30px rgba(0,0,0,0.15)';
+                navbar.style.background = 'rgba(15, 23, 42, 0.98)';
+                navbar.style.padding = '0.8rem 0';
             } else {
-                navbar.style.background = 'rgba(255, 255, 255, 0.95)';
-                navbar.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
+                navbar.style.background = 'rgba(15, 23, 42, 0.95)';
+                navbar.style.padding = '1rem 0';
             }
         });
 
-        // Smooth scrolling
+        // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -704,7 +806,7 @@
             });
         });
 
-        // Scroll reveal animations
+        // Fade in animation on scroll
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
@@ -713,104 +815,64 @@
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
+                    entry.target.classList.add('visible');
                 }
             });
         }, observerOptions);
 
-        document.querySelectorAll('.reveal').forEach(el => {
+        document.querySelectorAll('.fade-in').forEach(el => {
             observer.observe(el);
         });
 
-        // Hero text typing effect
-        const heroText = "Future-Ready Innovation";
-        let i = 0;
-        const heroH1 = document.querySelector('.hero h1');
-        function typeWriter() {
-            if (i < heroText.length) {
-                heroH1.textContent = heroText.slice(0, i + 1);
-                i++;
-                setTimeout(typeWriter, 100);
-            }
-        }
-        setTimeout(typeWriter, 500);
-
-        // Form submission
-        document.querySelector('.contact-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for your message! We\'ll get back to you soon. 🚀');
-            this.reset();
+        // Form submission feedback
+        const form = document.querySelector('form');
+        form.addEventListener('submit', function() {
+            const submitBtn = this.querySelector('.submit-btn');
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+            submitBtn.disabled = true;
         });
 
-        // Particle animation for hero
+        // Typing effect for hero title (optional enhancement)
+        const heroTitle = document.querySelector('.hero-text h1');
+        if (heroTitle) {
+            const text = heroTitle.textContent;
+            heroTitle.textContent = '';
+            let i = 0;
+            function typeWriter() {
+                if (i < text.length) {
+                    heroTitle.textContent += text.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, 50);
+                }
+            }
+            setTimeout(typeWriter, 500);
+        }
+
+        // Particle background effect (performance optimized)
         function createParticle() {
             const particle = document.createElement('div');
             particle.style.cssText = `
-                position: absolute;
+                position: fixed;
                 width: 4px;
                 height: 4px;
-                background: linear-gradient(45deg, #6366f1, #8b5cf6);
+                background: rgba(255,255,255,0.3);
                 border-radius: 50%;
                 pointer-events: none;
-                left: ${Math.random() * 100}vw;
-                top: 100vh;
-                animation: floatUp 6s linear infinite;
                 z-index: 1;
+                left: ${Math.random() * 100}vw;
+                animation: floatParticle linear infinite;
             `;
-            particle.innerHTML = '•';
-            document.querySelector('.hero').appendChild(particle);
-
-            setTimeout(() => {
-                particle.remove();
-            }, 6000);
+            particle.animate([
+                { transform: 'translateY(100vh) scale(0)', opacity: 1 },
+                { transform: 'translateY(-100px) scale(1)', opacity: 0 }
+            ], {
+                duration: Math.random() * 3000 + 5000,
+                easing: 'linear'
+            }).onfinish = () => particle.remove();
+            document.body.appendChild(particle);
         }
 
-        function createParticleAnimation() {
-            setInterval(createParticle, 300);
-        }
-
-        const style = document.createElement('style');
-        style.textContent = `
-            @keyframes floatUp {
-                to {
-                    transform: translateY(-100vh) rotate(360deg);
-                    opacity: 0;
-                }
-            }
-        `;
-        document.head.appendChild(style);
-
-        setTimeout(createParticleAnimation, 1000);
-
-        // Stats counter animation
-        function animateStats() {
-            const stats = document.querySelectorAll('.stat-number');
-            stats.forEach(stat => {
-                const target = parseInt(stat.textContent);
-                let current = 0;
-                const increment = target / 100;
-                const timer = setInterval(() => {
-                    current += increment;
-                    if (current >= target) {
-                        stat.textContent = target;
-                        clearInterval(timer);
-                    } else {
-                        stat.textContent = Math.floor(current);
-                    }
-                }, 20);
-            });
-        }
-
-        const statsObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    animateStats();
-                    statsObserver.unobserve(entry.target);
-                }
-            });
-        });
-
-        document.querySelector('.stats')?.parentElement && statsObserver.observe(document.querySelector('.stats')?.parentElement);
+        setInterval(createParticle, 300);
     </script>
 </body>
 </html>
